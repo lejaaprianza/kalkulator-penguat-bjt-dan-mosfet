@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <title>Perhitungan Penguatan BJT</title>
+  </head>
+  <body>
+    <div class="container border bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#"
+          ><img
+            src=".\logolab.jpg"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a
+                class="nav-link text-light font-weight-bold"
+                href=".\index.html"
+                >BJT</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light font-weight-bold"
+                href=".\index2.html"
+                >Mosfet</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Perhitungan Penguatan BJT</h1>
+      <div class="row">
+        <div class="col border-right">
+          <label>
+            <b>Nilai Av</b>
+          </label>
+          <input
+            type="number"
+            id="av"
+            class="form-control"
+            placeholder="0"
+            name="av"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai R<sub>C</sub></b>
+          </label>
+          <input
+            type="number"
+            id="rc"
+            class="form-control"
+            placeholder="0"
+            name="rc"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai R<sub>B1</sub></b>
+          </label>
+          <input
+            type="number"
+            id="rb1"
+            class="form-control"
+            placeholder="0"
+            name="rb1"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai R<sub>B2</sub></b>
+          </label>
+          <input
+            type="number"
+            id="rb2"
+            class="form-control"
+            placeholder="0"
+            name="rb2"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai &beta;</b>
+          </label>
+          <input
+            type="number"
+            id="beta"
+            class="form-control"
+            placeholder="0"
+            name="beta"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <div class="text-center p-3">
+            <img src=".\logolab.jpg" class="rounded" alt="..." />
+          </div>
+        </div>
+        <div class="col">
+          <label>
+            <b>Nilai gm</b>
+          </label>
+          <input
+            type="number"
+            id="gm"
+            readonly
+            class="pl-3 border-bottom form-control-plaintext"
+            placeholder="0"
+            name="gm"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai I<sub>C</sub></b>
+          </label>
+          <input
+            type="number"
+            id="ic"
+            readonly
+            class="pl-3 border-bottom form-control-plaintext"
+            placeholder="0"
+            name="ic"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai V<sub>C</sub></b>
+          </label>
+          <input
+            type="number"
+            id="vc"
+            readonly
+            class="pl-3 border-bottom form-control-plaintext"
+            placeholder="0"
+            name="vc"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai I<sub>E</sub></b>
+          </label>
+          <input
+            type="number"
+            id="ie"
+            readonly
+            class="pl-3 border-bottom form-control-plaintext"
+            placeholder="0"
+            name="ie"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai V<sub>B</sub></b>
+          </label>
+          <input
+            type="number"
+            id="vb"
+            readonly
+            class="pl-3 border-bottom form-control-plaintext"
+            placeholder="0"
+            name="vb"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai V<sub>E</sub></b>
+          </label>
+          <input
+            type="number"
+            id="ve"
+            readonly
+            class="pl-3 border-bottom form-control-plaintext"
+            placeholder="0"
+            name="ve"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <label>
+            <b>Nilai R<sub>E</sub></b>
+          </label>
+          <input
+            type="number"
+            id="re"
+            readonly
+            class="pl-3 border-bottom form-control-plaintext"
+            placeholder="0"
+            name="re"
+            onkeyup="exchange(this)"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+      </div>
+      <div class="p-2 bg-primary text-light font-weight-bold text-center">
+        Asisten Praktikum Teknik Elektro ITERA
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
